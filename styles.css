@@ -1,0 +1,4 @@
+body, html { /*body dekker hele siden*/
+    margin: 0;
+    height: 100%;
+}

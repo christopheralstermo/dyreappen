@@ -1,0 +1,29 @@
+.navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: palevioletred;
+    padding: 12px;
+    margin: 0;
+    color: white
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+}
+
+.navBtn {
+    margin: 4px;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 2%;
+}
+
+.navBtn:hover {
+    background-color: pink;
+}
