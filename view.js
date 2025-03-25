@@ -1,25 +1,30 @@
 function updateView() {
-    let currentView = '';
+    document.getElementById('app').innerHTML = /*HTML*/`
+        <div class="navBarContainer">${navBarView()}</div>
+        <div class="mainContainer">${contentManager()}</div>
+        <div class="footer"></div>
+    `;
+    }
 
+function contentManager() {
+    let html = '';
     switch(model.app.currentPage) {
         case 'frontPage':
-            currentView = testView();
-            break;
+            html = frontPageView();
         case 'logInView':
-            currentView = logInView();
-            break;
+            html = logInView();
     }
+    return html;
 }
-
-function testView(){
-    navBarView()
-    document.getElementById('app').innerHTML =  `hello`;
-}
-
 
 function navBarView() {
-    navBarHtml = /*HTML*/`
-    <div></div>
-    `;
+    return 'hei';
+}
 
+function frontPageView() {
+    return 'test';
+}
+
+function logInView() {
+    return '123';
 }
