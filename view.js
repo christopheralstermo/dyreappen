@@ -40,5 +40,7 @@ function logInView() {
 
 function handleLogin(event) {
     event.preventDefault();
-    const username = event.target.elements.username.value;
+    const {username, password} = model.inputs.login;
+    login(username, password);
+    updateView();
 }

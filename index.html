@@ -15,5 +15,12 @@
         <script src="navbar/navView.js"></script>
         <script src=""></script>
         <script src=""></script>
+<script>
+    function navigateToLogin() {
+        model.app.currentPage = 'loginView';
+        updateView();
+    }
+</script>
+<button onclick="navigateToLogin()">Logg inn</button>
 </body>
 </html>
