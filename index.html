@@ -20,7 +20,12 @@
         model.app.currentPage = 'loginView';
         updateView();
     }
+    function navigateToRegister() {
+        model.app.currentPage = 'registerView';
+        updateView();
+    }
 </script>
 <button onclick="navigateToLogin()">Logg inn</button>
+<button onclick="navigateToRegister()">Registrer deg her</button>
 </body>
 </html>
