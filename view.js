@@ -22,9 +22,7 @@ function contentManager() {
     return html;
 }
 
-function frontPageView() {
-    return 'test';
-}
+
 
 function logInView() {
     return /*HTML*/`

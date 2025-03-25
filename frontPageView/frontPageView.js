@@ -11,25 +11,6 @@ function frontPageView() {
     `;
 }
 
-function animalProfil() {
-    return /*HTML*/`
-    <div class="profiles">
-    <div class="profile-card">
-        <h3 id="ask">Be om å leke med Magnus</h3>
-        <div class="profile-image"></div>
-        <div class="profile-details">
-            <p>magnus - katt</p>
-            <p>4</p>
-            <p>oslo</p>
-            <p>vil møte: hund, katt</p>
-        </div>
-        <button>vis profil</button>
-        <div class="stars" data-rating="5">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-    </div>
-    `;
-}
 
 function animalProfileHtml() {
     let html = /*html*/`
