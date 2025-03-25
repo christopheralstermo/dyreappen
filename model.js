@@ -98,7 +98,7 @@ const model = {
 
 function login(username, password) {
     const user = model.data.users.find(user => user.username === username);
-    if (user && user.password === password) {
+    if (user) {
         model.app.isLoggedIn = true;
         model.app.currentPage = 'frontPage';
     } else {
