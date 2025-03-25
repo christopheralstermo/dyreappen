@@ -26,5 +26,21 @@ function frontPageView() {
 }
 
 function logInView() {
-    return '123';
+    return /*HTML*/`
+    <h2>Log in</h2>
+    <form onsubmit="handleLogin(event)">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <button type="submit">Log in</button>
+    </form>
+    `;
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    const username = event.target.elements.username.value;
 }
