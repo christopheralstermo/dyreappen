@@ -11,8 +11,10 @@ function contentManager() {
     switch(model.app.currentPage) {
         case 'frontPage':
             html = frontPageView();
+            break;
         case 'logInView':
             html = logInView();
+            break;
     }
     return html;
 }
