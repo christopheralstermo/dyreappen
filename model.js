@@ -68,7 +68,7 @@ const model = {
                 readyForPlay: true,
                 healthInformation: 'frisk',
                 availability: '',
-                picture: '',
+                picture: 'noe.jpg',
                 rating: 0,
             },
         ],
