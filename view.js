@@ -25,22 +25,22 @@ function frontPageView() {
 
 function logInView() {
     return /*HTML*/`
-    <h2>Log in</h2>
+    <h2>Logg in</h2>
     <form onsubmit="handleLogin(event)">
-    <label for="username">Username</label>
+    <label for="username">Brukernavn</label>
     <input type="text" id="username" name="username">
     <br>
-    <label for="password">Password</label>
+    <label for="password">Passord</label>
     <input type="password" id="password" name="password">
     <br>
-    <button type="submit">Log in</button>
+    <button type="submit">Logg in</button>
     </form>
     `;
 }
 
 function handleLogin(event) {
     event.preventDefault();
-    const {username, password} = model.inputs.login;
+    const {username, password} = model.inputs.loginForm;
     login(username, password);
     updateView();
 }
