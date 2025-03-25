@@ -17,10 +17,6 @@ function contentManager() {
     return html;
 }
 
-function navBarView() {
-    return 'hei';
-}
-
 function frontPageView() {
     return 'test';
 }
