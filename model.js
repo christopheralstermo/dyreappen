@@ -105,3 +105,30 @@ function login(username, password) {
         alert('Feil brukernavn eller passord');
     }
 }
+
+function register(name, lastName, email, username, password, repeatPassword) {
+    if ( password != repeatPassword) {
+        alert('Passordene er ikke like');
+        return;
+    }
+    const existingUser = model.data.users.find(user => user.username === username);
+    if (existingUser) {
+        alert('Brukernavnet er allerede i bruk');
+        return;
+    }
+    const newUser = {
+        username,
+        password,
+        email,
+        name,
+        lastName,
+        animalId: [],
+        userId: model.data.users.length,
+        isAdmin: false,
+        picture: '',
+    };
+    model.data.users.push(newUser);
+    alert('Bruker opprettet');
+    model.app.currentPage = 'frontPage';
+    updateView();
+}
