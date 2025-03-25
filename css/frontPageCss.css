@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+.filter {
+    background-color: #d4f0d4;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.filter h3 {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.filter label {
+    display: block;
+    margin: 5px 0;
+}
+
+img {
+    width: 150px;
+}
+/* card */
+
+#ask:hover {
+    font-size: 18px;
+    box-shadow: 0.2px 0.2px;
+    background-color: #83bcf6;
+}
+
+.profiles {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.profile-card {
+    background-color: #a3cffa;
+    width: 300px;
+    padding: 25px 35px 55px 25px;
+    border-radius: 10px;
+    text-align: center;
+    height: 300px;
+}
+
+.profile-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #0055aa;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.profile-details {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+
+.profile-card button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Stjerner */
+.stars {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.stars span {
+    color: #ccc; /* Grå som standard */
+}
+
+.stars span.filled {
+    color: #ffd700; /* Gul når fylt */
+}
+
+#frontPage {
+    display: flex;
+}
