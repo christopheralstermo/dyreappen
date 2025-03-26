@@ -3,7 +3,7 @@ function frontPageView() {
     <div id="frontPage">
         <div class="filter">
         ${animalHtml()}
-        <img src="view/frontPageView/theMap.png">
+        <img src="frontPageView/theMap.png">
         ${areaHtml()}
         </div>
         ${animalProfileHtml()}
