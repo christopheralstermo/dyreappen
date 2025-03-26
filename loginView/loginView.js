@@ -1,5 +1,6 @@
 function logInView() {
     return /*HTML*/`
+    <div class="container">
     <h2>Logg inn</h2>
     <form onsubmit="handleLogin(event)">
     <label for="username">Brukernavn:</label>
@@ -10,6 +11,7 @@ function logInView() {
     <br>
     <button type="submit">Logg inn</button>
     </form>
+    </div>
     `;
 }
 

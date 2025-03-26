@@ -1,5 +1,6 @@
 function registerView() {
     return /*HTML*/`
+    <div class="container">
     <h2>Registrer deg</h2>
     <form onsubmit="handleRegister(event)">
     <label for="name">Fornavn:</label>
@@ -22,6 +23,7 @@ function registerView() {
     <br>
     <button type="submit">Registrer deg</button>
     </form>
+    </div>
     `;
 }
 

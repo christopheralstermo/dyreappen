@@ -1,4 +1,11 @@
-
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
 
 form {
     display: flex;
@@ -14,8 +21,8 @@ form {
 
 h2 {
     margin-bottom: 20px;
-    text-align: center;
     color: #333;
+    text-align: center;
 }
 
 label {
