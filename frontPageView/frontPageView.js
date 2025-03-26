@@ -34,7 +34,7 @@ function animalProfileHtml() {
                 <p>vil møte: hund, katt</p>
             </div>
             <button>vis profil</button>
-            <div class="stars" data-rating="5">
+            <div class="stars" data-rating="5" onclick="updateRating(${index})">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
         </div>
