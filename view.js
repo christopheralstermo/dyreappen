@@ -22,10 +22,3 @@ function contentManager() {
     return html;
 }
 
-function navBarView() {
-    return 'heiii'
-}
-
-function frontPageView() {
-    return 'testing'
-}
