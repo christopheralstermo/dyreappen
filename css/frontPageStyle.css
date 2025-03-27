@@ -24,23 +24,32 @@ body {
     display: block;
     margin: 5px 0;
 }
-
-img {
+#gpsBildet {
     width: 150px;
 }
+
 /* card */
 
+#profilBildet {
+    padding-top: 10px;
+    height: 180px;
+    margin-left: 0px;
+}
+
 #ask:hover {
-    font-size: 18px;
     box-shadow: 0.2px 0.2px;
     background-color: #83bcf6;
 }
 
+#profileBtn{
+    background-color: green;
+}
+
 .profiles {
     display: flex;
-    flex: 1;
-    justify-content: space-between;
-    margin: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start; 
 }
 
 .profile-card {
@@ -49,21 +58,13 @@ img {
     padding: 25px 35px 55px 25px;
     border-radius: 10px;
     text-align: center;
-    height: 300px;
+    height: 310px;
 }
 
 .profile-card h3 {
     margin: 0;
     font-size: 16px;
     color: #0055aa;
-}
-
-.profile-image {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    margin: 10px auto;
-    border-radius: 10px;
 }
 
 .profile-details {
