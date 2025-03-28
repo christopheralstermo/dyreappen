@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>repo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar/navStyles.css">
     <link rel="stylesheet" href="css/frontPageStyle.css">
     <link rel="stylesheet" href="css/authStyle.css">
+    <link rel="stylesheet" href="css/animalRegistration.css">
 </head>
 <body onload="updateView()">
         <div id="app"></div>
@@ -19,7 +20,8 @@
         <script src="loginView\loginView.js"></script>
         <script src="registerView\registerView.js"></script>
         <script src="controller/frontPageController.js"></script>
-        <script src=""></script>
+        <script src="animalRegistrationView/createAnimalProfileView.js"></script>
+        <script src="animalRegistrationView/animalProfileView.js"></script>
 
 <script>
     function navigateToLogin() {
@@ -30,8 +32,15 @@
         model.app.currentPage = 'registerView';
         updateView();
     }
+
+    function navigateToCreateAnimalProfile(id) {
+    model.app.currentPage = 'createAnimalProfile';
+    updateView();
+    }
+
 </script>
 <button onclick="navigateToLogin()">Logg inn</button>
 <button onclick="navigateToRegister()">Registrer deg her</button>
+<button onclick="navigateToCreateAnimalProfile()">Registrer dyr</button>
 </body>
 </html>

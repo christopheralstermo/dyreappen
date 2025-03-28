@@ -40,6 +40,12 @@ const model = {
             notification: null,
         },
 
+        animalProfile: {
+            name: '',
+            id: 1        
+        }
+
+
     },
 
     data: {
@@ -146,6 +152,13 @@ const model = {
             },
         ],
 
+        products: [
+            { id: 1, name: 'Navn'}, 
+            { id: 2, name: 'Rase'},
+            { id: 3, name: 'Kjønn'},
+            { id: 4, name: 'Favorittaktiviteter'},
+        ],
+
     },
 };
 
@@ -184,4 +197,25 @@ function register(name, lastName, email, username, password, repeatPassword) {
     alert('Bruker opprettet');
     model.app.currentPage = 'frontPage';
     updateView();
+}
+
+function showPreview(event) {      // Forhåndsvisning av bilde når du registrerer dyr
+    const file = event.target.files[0];
+    const previewContainer = document.querySelector('.preview');
+    previewContainer.innerHTML = ''; // Clear previous content
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.alt = 'Uploaded Image';
+            img.style.maxWidth = '200px';
+            img.style.borderRadius = '5px';
+            previewContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    } else {
+        previewContainer.innerHTML = '<p>No image selected</p>';
+    }
 }
