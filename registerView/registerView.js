@@ -1,8 +1,8 @@
 function registerView() {
     return /*HTML*/`
-    <div class="container">
+    <div id="registerContainer">
     <h2>Registrer deg</h2>
-    <form onsubmit="handleRegister(event)">
+    <form id="registerForm" onsubmit="handleRegister(event)">
     <label for="name">Fornavn:</label>
     <input type="text" id="name" name="name" oninput="model.inputs.register.name = this.value">
     <br>

@@ -1,8 +1,8 @@
 function logInView() {
     return /*HTML*/`
-    <div class="container">
+    <div id="loginContainer">
     <h2>Logg inn</h2>
-    <form onsubmit="handleLogin(event)">
+    <form id="loginForm" onsubmit="handleLogin(event)">
     <label for="username">Brukernavn:</label>
     <input type="text" id="username" name="username" oninput="model.inputs.loginForm.username = this.value">
     <br>
