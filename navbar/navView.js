@@ -41,3 +41,7 @@ function showPopup() {
 function hidePopup() {
     document.getElementById('notificationPopup').style.display = 'none';
 }
+
+<button onclick="navigateToLogin()">Logg inn</button>
+<button onclick="navigateToRegister()">Registrer deg her</button>
+<button onclick="navigateToCreateAnimalProfile()">Registrer dyr</button>

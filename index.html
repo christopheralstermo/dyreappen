@@ -23,24 +23,5 @@
         <script src="animalRegistrationView/createAnimalProfileView.js"></script>
         <script src="animalRegistrationView/animalProfileView.js"></script>
 
-<script>
-    function navigateToLogin() {
-        model.app.currentPage = 'loginView';
-        updateView();
-    }
-    function navigateToRegister() {
-        model.app.currentPage = 'registerView';
-        updateView();
-    }
-
-    function navigateToCreateAnimalProfile(id) {
-    model.app.currentPage = 'createAnimalProfile';
-    updateView();
-    }
-
-</script>
-<button onclick="navigateToLogin()">Logg inn</button>
-<button onclick="navigateToRegister()">Registrer deg her</button>
-<button onclick="navigateToCreateAnimalProfile()">Registrer dyr</button>
 </body>
 </html>
