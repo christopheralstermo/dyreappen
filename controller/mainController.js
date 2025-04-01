@@ -1,13 +1,5 @@
-    function navigateToLogin() {
-        model.app.currentPage = 'loginView';
+    function navigate(thePage) {
+        model.app.currentPage = thePage;
         updateView();
     }
-    function navigateToRegister() {
-        model.app.currentPage = 'registerView';
-        updateView();
-    }
-
-    function navigateToCreateAnimalProfile(id) {
-    model.app.currentPage = 'createAnimalProfile';
-    updateView();
-    }
+  
