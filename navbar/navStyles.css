@@ -22,6 +22,7 @@
     cursor: pointer;
     transition-duration: 0.4s;
     border-radius: 2%;
+    font-weight: bold;
 }
 
 .navBtn:hover {
@@ -79,4 +80,8 @@
     font-size: 14px;
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-family: "Winky Sans", sans-serif;
 }
