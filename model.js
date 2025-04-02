@@ -34,6 +34,7 @@ const model = {
         },
         
         messages: {
+            sender:null,
             receiver:null,
             message: null,
             date:null,
