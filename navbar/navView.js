@@ -14,8 +14,8 @@ function navBarView() {
 
 function createNotificationWindow() {
     return /*HTML*/`
-    <div class="notificationContainer" onclick="showPopup()">Varslinger
-    </div>
+    <button class="navBtn" onclick="showPopup()">Varslinger
+    </button>
     ${popUp()}
     `;
 }
