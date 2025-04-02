@@ -14,8 +14,8 @@ function navBarView() {
 
 function createNotificationWindow() {
     return /*HTML*/`
-    <button class="navBtn" onclick="showPopup()">Varslinger
-    </button>
+    <div class="notificationContainer" onclick="showPopup()">Varslinger
+    </div>
     ${popUp()}
     `;
 }
@@ -40,12 +40,4 @@ function showPopup() {
 
 function hidePopup() {
     document.getElementById('notificationPopup').style.display = 'none';
-}
-
-function buttonHTML() {
-    return /*HTML*/`
-        <button onclick="navigate('logInView')">Logg inn</button>
-        <button onclick="navigate('registerView')">Registrer deg her</button>
-        <button onclick="navigate('createAnimalProfileView')">Registrer dyr</button>
-    `;
 }

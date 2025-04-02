@@ -9,6 +9,7 @@ const model = {
 
         filters: {
             selectedAnimals: [],
+            selectedCounties: [],
         },
 
         loginForm: {
@@ -17,13 +18,31 @@ const model = {
         },
 
         register: {
-            name: '',
-            lastName: '',
-            email: '',
-            username: '',
-            password: '',
-            repeatPassword: '',
+            name: null,
+            lastName: null,
+            email: null,
+            username: null,
+            password: null,
+            repeatPassword: null,
+            animal: null,
         },
+        
+        info: 
+            {
+                animal: null,
+                rase: null,
+                name: null,
+                sex: null,
+                age: null,
+                favouriteActivity: null,
+                kg: null,
+                location: null,
+                readyForPlay: null,
+                healthInformation: null,
+                availability: null,
+                rating: null,
+            },
+        
         searchField:{
             searchText: null,
         },
@@ -51,86 +70,46 @@ const model = {
     data: {
         categories: {
             animals: ['katt', 'hund', 'fugl', 'hamster', 'slange'],
-            counties: ['Akershus', 'Oslo', 'Vestland', 'Trøndelag', 'Innlandet', 'Agder', 'Østfold', 'Møre og Romsdal', 'Buskerud', 'Vestfold', 'Nordland', 'Telemark', 'Troms', 'Finnmark']
+            
+            counties: [
+                'Akershus', 'Oslo', 'Vestland', 
+                'Trøndelag', 'Innlandet', 'Agder', 'Østfold', 
+                'Møre og Romsdal', 'Buskerud', 'Vestfold', 
+                'Nordland', 'Telemark', 'Troms', 'Finnmark'
+            ]
         },
+
         users: [
             {
                 username: 'varinlinnea',
                 password: '',
                 email: 'varino@getacademy.no',
                 name: 'Vårin',
-                animalId: [],
+                animalId: [0],
                 userId: 0,
                 isAdmin: false,
                 picture: '',
+                animals: [
+                    {
+                        name: 'Magnus',
+                        age: 14,
+                        animal: 'katt',
+                        animalBreed: '',
+                        kg: '',
+                        sex: 'male',
+                        favouriteActivities: ['sove', 'spise'],
+                        location: 'Vestland',
+                        readyForPlay: true,
+                        healthInformation: 'frisk',
+                        availability: '',
+                        picture: 'animalPics/magnus.jpg',
+                        rating: 0,
+                    },
+                ],
             },
+
         ],
-        animals: [
-            {
-                animalId: 0,
-                name: 'Magnus',
-                age: 14,
-                animal: 'katt',
-                animalBreed: '',
-                kg: '',
-                sex: 'male',
-                favouriteActivities: ['sove', 'spise'],
-                location: 'Vestland',
-                readyForPlay: true,
-                healthInformation: 'frisk',
-                availability: '',
-                picture: 'animalPics/magnus.jpg',
-                rating: 0,
-            },
-            {
-                animalId: 1,
-                name: 'Ruffen',
-                age: 3,
-                animal: 'hund',
-                animalBreed: 'Bearded Collie',
-                kg: 22,
-                sex: 'male',
-                favouriteActivities: ['spise', 'bølle'],
-                location: 'Vestfold',
-                readyForPlay: true,
-                healthInformation: 'frisk',
-                availability: '',
-                picture: 'animalPics/ruffenMiddle.jpg',
-                rating: 0,
-            },
-            {
-                animalId: 2,
-                name: 'Bjarne',
-                age: 57,
-                animal: 'hund',
-                animalBreed: 'Bull Terrier',
-                kg: 22,
-                sex: 'male',
-                favouriteActivities: ['spise', 'bølle'],
-                location: 'Østfold',
-                readyForPlay: true,
-                healthInformation: 'frisk',
-                availability: '',
-                picture: 'animalPics/bjarne.jpg',
-                rating: 0,
-            },
-            {
-                animalId: 3,
-                name: 'Svein',
-                age: 35,
-                animal: 'fugl',
-                animalBreed: 'Kollibri',
-                kg: 42,
-                sex: 'male',
-                favouriteActivities: ['spise', 'bølle'],
-                location: 'Østfold',
-                readyForPlay: true,
-                healthInformation: 'frisk',
-                availability: '',
-                picture: 'animalPics/svein.jpg',
-                rating: 0,
-            },
-        ],
+
 
         messages: [
             {
@@ -150,13 +129,6 @@ const model = {
                 notification: 'Ok, la oss sette opp en playdate!',
                 date: '2021-05-24',
             },
-        ],
-
-        products: [
-            { id: 1, name: 'Navn'}, 
-            { id: 2, name: 'Rase'},
-            { id: 3, name: 'Kjønn'},
-            { id: 4, name: 'Favorittaktiviteter'},
         ],
 
     },
