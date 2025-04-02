@@ -15,9 +15,9 @@ function logInView() {
     `;
 }
 
-function handleLogin(event) {
+function handleLogIn(event) {
     event.preventDefault();
     const {username, password} = model.inputs.loginForm;
-    login(username, password);
+    logIn(username, password);
     updateView();
 }

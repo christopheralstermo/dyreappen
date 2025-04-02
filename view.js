@@ -2,9 +2,9 @@ function updateView() {
     document.getElementById('app').innerHTML = /*HTML*/`
         <div class="navBarContainer">${navBarView()}</div>
         <div class="mainContainer">${contentManager()}</div>
-        <div class="footer">${model.app.currentPage === 'frontPage' ? footerButtons() : ''}</div>
+        <div class="footer">${model.app.currentPage === 'frontPage' ? buttonHTML() : ''}</div>
     `;
-}
+    }
 
 function contentManager() {
     let html = '';
@@ -28,10 +28,3 @@ function contentManager() {
     return html;
 }
 
-
-function footerButtons() {
-    return /*html*/`
-        <button onclick="navigate('logInView')">Logg inn</button>
-        <button onclick="navigate('registerView')">Registrer deg her</button>
-    `;
-}
