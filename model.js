@@ -49,14 +49,10 @@ const model = {
         
         ratingForm:{
             rating: null,
-            comment:null,
         },
         
         messages: {
-            sender:null,
-            receiver:null,
             message: null,
-            date:null,
         },
 
         notifications: {
