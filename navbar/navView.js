@@ -46,6 +46,5 @@ function buttonHTML() {
     return /*HTML*/`
         <button onclick="navigate('logInView')">Logg inn</button>
         <button onclick="navigate('registerView')">Registrer deg her</button>
-        <button onclick="navigate('createAnimalProfileView')">Registrer dyr</button>
     `;
 }
