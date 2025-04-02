@@ -17,12 +17,12 @@ const model = {
         },
 
         register: {
-            name: null,
-            lastName: null,
-            email: null,
-            username: null,
-            password: null,
-            repeatPassword: null,
+            name: '',
+            lastName: '',
+            email: '',
+            username: '',
+            password: '',
+            repeatPassword: '',
         },
         searchField:{
             searchText: null,

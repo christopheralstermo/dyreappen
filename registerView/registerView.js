@@ -29,7 +29,33 @@ function registerView() {
 
 function handleRegister(event) {
     event.preventDefault();
+
+    if (!model.inputs.register) {
+        alert('Registrringsdata mangler');
+        return;
+    }
+
     const {name, lastName, email, username, password, repeatPassword} = model.inputs.register;
-    register(name, lastName, email, username, password, repeatPassword);
+    
+    if (!name.trim() || !lastName.trim() || !email.trim() || !username.trim() || !password.trim() || !repeatPassword.trim()) {
+        alert('Vennligst fyll ut alle felt');
+        return;
+    } if (password !== repeatPassword) {
+        alert('Passordene må være like');
+        return;
+    } if(isUsernameTaken(username)) {
+        alert('Brukernavnet er allerede tatt');
+        return;
+    } 
+    alert('Registrering vellykket!');
+    model.app.currentPage = 'logInView';
     updateView();
+}
+
+function isUsernameTaken(username) {
+    const existingUsers = [
+        { username: 'testuser' },
+        { username: 'admin' }
+    ];
+    return existingUsers.some(user => user.username === username);
 }
