@@ -30,10 +30,13 @@ const model = {
         
         ratingForm:{
             rating: null,
+            comment:null,
         },
         
         messages: {
+            receiver:null,
             message: null,
+            date:null,
         },
 
         notifications: {
