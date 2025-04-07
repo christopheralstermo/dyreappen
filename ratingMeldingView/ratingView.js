@@ -1,14 +1,14 @@
 function ratingView(){
    return /*HTML*/`
     <div class="card">
-        <h2> Legg igjen Tilbakemelding</h2>
+        <h2> Legg igjen tilbakemelding</h2>
         <div class="stars">
          ${[1, 2, 3, 4, 5].map(star => 
             `<span class="star ${model.inputs.ratingForm.rating >= star ? 'active' : ''}" 
                 onclick="setRating(${star})">★</span>`).join('')}
         </div>
         <textarea id="commentInput" placeholder="skriv en kommentar..."></textarea>
-        <button class="submitButton" onclick="submitFeedback()"> Send Tilbacke Melding</button>
+        <button class="submitButton" onclick="submitFeedback()"> Send tilbakemelding</button>
     </div>
 
     <div class="card">
