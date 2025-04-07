@@ -23,7 +23,10 @@ function contentManager() {
             break;
         case 'animalProfile':
             html = animalProfileView();
-            break;    
+            break;  
+        case 'reatingView':
+            html = reatingView();
+            break;   
     }
     return html;
 }
