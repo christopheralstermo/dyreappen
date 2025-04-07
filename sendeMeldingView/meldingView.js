@@ -1,23 +1,24 @@
 function meldingView(){
-    return /*html*/`
-    <div class= "container">
-        <h2> Forum </h2>
-        <input type="text" placeholder= "Sender" value="${model.inputs.messages.sender}"oninput="updateInput"('sender', this.value)">
-        <br>
-        <input type="text" placeholder= "Mottaker" value="${model.inputs.messages.receiver}"oninput="updateInput"('receiver', this.value)">
-        <br>
-        <textarea placeholder= "Skrive Melding ..." oninput="updateInput"('message', this.value)"> ${model.inputs.messages.message}</textarea>
-        <br>
-        <input type="date" value="${model.inputs.messages.date}" oninput="updateInput('date', this.value)">
-        <br>
-        <button onclick="sendMessage()"> Send Melding </button> 
-    <div>
-    <div class= "container">
-    <h3> Sendte Melding </h3>
-    ${sendQuickMessages()}
-    </div>
+    return /*HTML*/`
+        <div id="messageSection" class="container">
+            <h2>Forum</h2>
+            <input type="text" placeholder="Sender" value="${model.inputs.messages.sender}" oninput="updateInput('sender', this.value)">
+            <br>
+            <input type="text" placeholder="Mottaker" value="${model.inputs.messages.receiver}" oninput="updateInput('receiver', this.value)">
+            <br>
+            <textarea placeholder="Skriv Melding ..." oninput="updateInput('message', this.value)">${model.inputs.messages.message}</textarea>
+            <br>
+            <input type="date" value="${model.inputs.messages.date}" oninput="updateInput('date', this.value)">
+            <br>
+            <button onclick="sendMessage()">Send Melding</button> 
+        </div>
+        <div id="messageSection" class="container">
+            <h3>Sendte Meldinger</h3>
+            ${sendQuickMessages()}
+        </div>
     `;
 }
+
 
 function sendQuickMessages(){
  return model.data.messages.map(msg=>`
