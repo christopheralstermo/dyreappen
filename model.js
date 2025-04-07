@@ -55,9 +55,7 @@ const model = {
             receiver: "",
             message: "",
             date: new Date().toISOString().split('T')[0], // Dagens dato
-        },
-        messages: {
-            message: null,
+            sender: '',
         },
 
         notifications: {
