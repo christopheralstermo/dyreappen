@@ -1,4 +1,4 @@
-function updateView(){
+function ratingView(){
    return /*HTML*/`
     <div class="card">
         <h2> Legg igjen Tilbakemelding</h2>

@@ -52,11 +52,12 @@ const model = {
             comment:``,
         },
         messages: {
+            sender:"",
             receiver: "",
             message: "",
             date: new Date().toISOString().split('T')[0], // Dagens dato
-            sender: '',
         },
+        
 
         notifications: {
             notification: null,
