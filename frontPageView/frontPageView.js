@@ -102,7 +102,7 @@ function animalProfileHtml() {
                 <p>vil møte: hund, katt</p>
             </div>
             <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
-            <div class="stars" data-rating="5" onclick="console.log('link')">
+            <div class="stars" data-rating="5" onclick="navigate('ratingView')">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
         </div>
