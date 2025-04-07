@@ -24,7 +24,7 @@ function contentManager() {
         case 'animalProfile':
             html = animalProfileView();
             break;  
-        case 'ratingView':
+        case 'ratingMeldingView':
             html = ratingView();
             break;   
         case 'sendeMeldingView':
