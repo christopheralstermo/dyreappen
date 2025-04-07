@@ -18,3 +18,6 @@ function ratingView(){
     </div>
     `;
 }
+
+
+

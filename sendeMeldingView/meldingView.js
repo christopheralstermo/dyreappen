@@ -1,13 +1,12 @@
 function meldingView(){
-    let app= document.getElementById("app");
-    app.innerHTML=`
+    return /*html*/`
     <div class= "container">
         <h2> Forum </h2>
         <input type="text" placeholder= "Sender" value="${model.inputs.messages.sender}"oninput="updateInput"('sender', this.value)">
         <br>
         <input type="text" placeholder= "Mottaker" value="${model.inputs.messages.receiver}"oninput="updateInput"('receiver', this.value)">
         <br>
-        <textarea placeholder= "Skrive Melding ..." oninput="updateInput"('massge', this.value)"> ${model.inputs.messages.message}</textarea>
+        <textarea placeholder= "Skrive Melding ..." oninput="updateInput"('message', this.value)"> ${model.inputs.messages.message}</textarea>
         <br>
         <input type="date" value="${model.inputs.messages.date}" oninput="updateInput('date', this.value)">
         <br>

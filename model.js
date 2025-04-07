@@ -1,6 +1,6 @@
 const model = {
     app: {
-        currentPage: 'frontPage',
+        currentPage: 'meldingView',
         isLoggedIn: false,
 
     },
