@@ -7,7 +7,6 @@ function navBarView() {
             <div>${createNotificationWindow()}</div>
             <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
             <button class="navBtn" onclick="model.app.currentPage = 'logInView'; updateView();">Logg inn</button>
-            <button class="navBtn" onclick="model.app.currentPage = 'logInView'; updateView();">Logg inn</button>
         </div>
         
     `;
