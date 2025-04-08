@@ -1,8 +1,8 @@
 function updateView() {
+    console.log('Oppdaterer visningen...')
     document.getElementById('app').innerHTML = /*HTML*/`
         <div class="navBarContainer">${navBarView()}</div>
         <div class="mainContainer">${contentManager()}</div>
-        <div class="footer">${model.app.currentPage === 'frontPage' ? buttonHTML() : ''}</div>
     `;
     }
 
