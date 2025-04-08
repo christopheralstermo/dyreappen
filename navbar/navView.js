@@ -5,13 +5,30 @@ function navBarView() {
         </div>
         <div class="navRight">
             <div>${createNotificationWindow()}</div>
-            <button class="navBtn" onclick="model.app.currentPage = 'messagesPage'">Meldinger</button>
-            <button class="navBtn" onclick="navigate('logInView')">Logg inn</button>
+            <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
+            <button class="navBtn" onclick="model.app.currentPage = 'logInView'; updateView();">Logg inn</button>
+            <button class="navBtn" onclick="model.app.currentPage = 'logInView'; updateView();">Logg inn</button>
         </div>
+        
     `;
     return navBarHtml;
 }
 
+function footerView() {
+    const footerHtml = /*HTML*/`
+        <div class="footerContainer">
+            <div class="footerLeft">
+                <span>&copy; 2025 Playdate</span>
+            </div>
+            <div class="footerRight">
+                <button class="footerBtn" onclick="model.app.currentPage = 'aboutPage'; updateView();">Om oss</button>
+                <button class="footerBtn" onclick="model.app.currentPage = 'contactPage'; updateView();">Kontakt</button>
+                <button class="footerBtn" onclick="model.app.currentPage = 'privacyPolicy'; updateView();">Personvern</button>
+            </div>
+        </div>
+    `;
+    return footerHtml;
+}
 function createNotificationWindow() {
     return /*HTML*/`
     <button class="navBtn" onclick="showPopup()">Varslinger

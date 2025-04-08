@@ -50,11 +50,15 @@ const model = {
         
         ratingForm:{
             rating: null,
+            comment:``,
+        },
+        messages: {
+            sender:"",
+            receiver: "",
+            message: "",
+            date: new Date().toISOString().split('T')[0], // Dagens dato
         },
         
-        messages: {
-            message: null,
-        },
 
         notifications: {
             notification: null,

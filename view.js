@@ -3,6 +3,7 @@ function updateView() {
     document.getElementById('app').innerHTML = /*HTML*/`
         <div class="navBarContainer">${navBarView()}</div>
         <div class="mainContainer">${contentManager()}</div>
+        <div class="footerContainer">${footerView}</div>
     `;
     }
 
@@ -23,7 +24,13 @@ function contentManager() {
             break;
         case 'animalProfile':
             html = animalProfileView();
-            break;    
+            break;  
+        case 'ratingView':
+            html = ratingView();
+            break;   
+        case 'meldingView':
+            html = meldingView();
+            break;   
     }
     return html;
 }
