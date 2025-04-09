@@ -1,6 +1,7 @@
 const model = {
     app: {
-        currentPage: 'frontPage',
+        //currentPage: 'frontPage',
+        currentPage: 'ratingView',
         isLoggedIn: false,
 
     },

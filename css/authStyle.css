@@ -1,0 +1,122 @@
+#registerContainer {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#registerForm h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+#registerForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#registerForm input {
+    margin-bottom: 15px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+#registerForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registerForm button:hover {
+    background-color: #45a049;
+}
+
+#loginContainer {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+#loginForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#loginForm input {
+    margin-bottom: 15px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+#loginForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+    background-color: #45a049;
+}
+
+.link-button {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-button:hover {
+    color: #007BFF;
+}
+
+.error {
+    color: red;
+}
