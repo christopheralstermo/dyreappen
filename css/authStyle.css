@@ -107,3 +107,16 @@
 #loginForm button:hover {
     background-color: #45a049;
 }
+
+.link-button {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-button:hover {
+    color: #007BFF;
+}
+
+.error {
+    color: red;
+}

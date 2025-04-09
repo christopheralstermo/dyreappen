@@ -1,39 +1,3 @@
-.footerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    height: 50px;
-    color: palevioletred;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    border-top: 1px solid #ccc;
-}
-
-.footerLeft {
-    display: flex;
-    align-items: center;
-    
-}
-
-.footerRight {
-    margin-right: 12px;
-}
-
-.footerBtn {
-    margin: 4px;
-    background-color: transparent;
-    color: palevioletred;
-    border: 0;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    border-radius: 2%;
-    font-weight: bold;
-}
-
 .navBarContainer {
     display: flex;
     justify-content: space-between;
@@ -120,4 +84,40 @@
 
 .logo {
     font-family: "Winky Sans", sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    color: palevioletred;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid #ccc;
+}
+
+.footerLeft {
+    display: flex;
+    align-items: center;
+    
+}
+
+.footerRight {
+    margin-right: 12px;
+}
+
+.footerBtn {
+    margin: 4px;
+    background-color: transparent;
+    color: palevioletred;
+    border: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 2%;
+    font-weight: bold;
 }

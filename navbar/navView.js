@@ -1,5 +1,5 @@
-function navBarView() {
-    navBarHtml = /*HTML*/`
+   function navBarView() { 
+   let navBarHtml = /*HTML*/`
         <div class="navLeft">
             <div class="logo" onclick="model.app.currentPage = 'frontPage'; updateView();">Playdate</div>
         </div>
@@ -9,6 +9,20 @@ function navBarView() {
             <button class="navBtn" onclick="model.app.currentPage = 'logInView'; updateView();">Logg inn</button>
         </div>
         
+    `;
+    return navBarHtml;
+} 
+
+function loggedInNavBarView() {
+    let navBarHtml = /*HTML*/`
+        <div class="navLeft">
+            <div class="logo" onclick="model.app.currentPage = 'frontPage'; updateView();">Playdate</div>
+        </div>
+        <div class="navRight">
+            <div>${createNotificationWindow()}</div>
+            <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
+            <button class="navBtn" onclick="model.app.currentPage = 'userView'; updateView();">Hei, "brukernavn"</button>
+        </div>
     `;
     return navBarHtml;
 }
