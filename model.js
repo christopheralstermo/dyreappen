@@ -1,7 +1,6 @@
 const model = {
     app: {
         currentPage: 'frontPage',
-        isLoggedIn: false,
 
     },
     
@@ -17,7 +16,7 @@ const model = {
             password: '',
         },
 
-        register: {
+        registerForm: {
             name: '',
             lastName: '',
             email: '',
@@ -26,6 +25,7 @@ const model = {
             repeatPassword: '',
             animal: '',
             picture: null,
+            isLoggedIn: false,
         },
         
         info: 
@@ -111,6 +111,7 @@ const model = {
                         rating: 0,
                     },
                 ],
+                isLoggedIn: false,
             },
             {
                 username: 'test',
@@ -123,6 +124,7 @@ const model = {
                 picture: '',
                 animals: [   
                 ],
+                isLoggedIn: false,
             }
 
         ],

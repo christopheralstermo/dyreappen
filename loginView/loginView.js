@@ -24,7 +24,7 @@ function checkLogIn(){
         if(model.inputs.loginForm.username == model.data.users[i].username
             && model.inputs.loginForm.password == model.data.users[i].password
         ){
-            model.app.isLoggedIn = true; // Update the logged-in state
+            model.data.users[i].isLoggedIn = true; // Update the logged-in state of this user
             model.app.currentPage = 'frontPage'; // Set the current page to the dashboard
             loggedInNavBarView();
             updateView();
