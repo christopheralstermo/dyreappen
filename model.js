@@ -13,19 +13,18 @@ const model = {
         },
 
         loginForm: {
-            username: '',
-            password: '',
+            username: null,
+            password: null,
         },
 
         register: {
-            name: '',
-            lastName: '',
-            email: '',
-            username: '',
-            password: '',
-            repeatPassword: '',
-            animal: '',
-            picture: null,
+            name: null,
+            lastName: null,
+            email: null,
+            username: null,
+            password: null,
+            repeatPassword: null,
+            animal: null,
         },
         
         info: 
