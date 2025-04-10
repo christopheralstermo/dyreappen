@@ -24,13 +24,15 @@ function checkLogIn(){
         if(model.inputs.loginForm.username == model.data.users[i].username
             && model.inputs.loginForm.password == model.data.users[i].password
         ){
+            console.log ("logged in as: ", model.data.users[i].userId);
+            model.app.loggedInId = model.data.users[i].userId; //Lagre id til innlogget bruker
             model.data.users[i].isLoggedIn = true; // Update the logged-in state of this user
             model.app.currentPage = 'frontPage'; // Set the current page to the dashboard
             loggedInNavBarView();
             updateView();
         }
         else {
-            //evt 404 eller feil passord / brukernavn view her
+            //
         }
     }
 }

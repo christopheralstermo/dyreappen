@@ -1,31 +1,29 @@
-function logIn(username, password) {
-    const user = model.data.users.find(user => user.username === username);
-    if (user && user.password === password) {
-        model.app.isLoggedIn = true;
-        model.app.currentPage = 'frontPage';
-        updateView();
-    } else {
-        alert('Feil brukernavn eller passord');
-    }
-    console.log('Brukernavn:', username);
-    console.log('Passord:', password);
+// function logIn(username, password) {
+//     for (const user of model.data.users) {
+//         if (user.username === username && user.password === password) {
+//             user.isLoggedIn = true; // Oppdaterer den innloggede brukerens tilstand
+//             model.app.loggedInId = user.userId;
+//         }
+//     }
+//     console.log('Brukernavn:', username);
+//     console.log('Passord:', password);
 
-    if (!username.trim() || !password.trim()) {
-        displayError('Vennligst fyll ut alle felt');
-        return;
-    }
+//     if (!username.trim() || !password.trim()) {
+//         displayError('Vennligst fyll ut alle felt');
+//         return;
+//     }
     
-    const isAuthenticated = mockAuthenticate(username, password);
-    console.log('Er autentisert:', isAuthenticated);
+//     const isAuthenticated = mockAuthenticate(username, password);
+//     console.log('Er autentisert:', isAuthenticated);
     
-    if (isAuthenticated) {
-        model.app.isLoggedIn = true;
-        model.app.currentPage = 'frontPage';
-        updateView();
-    } else {
-        displayError('Feil brukernavn eller passord');
-    }
-}
+//     if (isAuthenticated) {
+//         model.app.isLoggedIn = true;
+//         model.app.currentPage = 'frontPage';
+//         updateView();
+//     } else {
+//         displayError('Feil brukernavn eller passord');
+//     }
+// }
 
 function displayError(message) {
     const errorMessageElement = document.getElementById('errorMessage');
@@ -51,3 +49,33 @@ function mockAuthenticate(username, password) {
     console.log('Autentiseringsresultat:', result)
     return result; // Returner resultatet av autentiseringen
 }
+
+// function logIn(username, password) {
+//     const user = model.data.users.find(user => user.username === username);
+//     if (user && user.password === password) {
+//         model.app.isLoggedIn = true;
+//         model.app.currentPage = 'frontPage';
+//         model.user.isLoggedIn = true;
+//         updateView();
+//     } else {
+//         alert('Feil brukernavn eller passord');
+//     }
+//     console.log('Brukernavn:', username);
+//     console.log('Passord:', password);
+
+//     if (!username.trim() || !password.trim()) {
+//         displayError('Vennligst fyll ut alle felt');
+//         return;
+//     }
+    
+//     const isAuthenticated = mockAuthenticate(username, password);
+//     console.log('Er autentisert:', isAuthenticated);
+    
+//     if (isAuthenticated) {
+//         model.app.isLoggedIn = true;
+//         model.app.currentPage = 'frontPage';
+//         updateView();
+//     } else {
+//         displayError('Feil brukernavn eller passord');
+//     }
+// }

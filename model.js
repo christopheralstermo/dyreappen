@@ -2,6 +2,7 @@ const model = {
     app: {
         currentPage: 'frontPage',
 
+        loggedInId: null,
     },
     
     inputs: {
@@ -119,7 +120,7 @@ const model = {
                 email: 'testmail@test.no',
                 name: 'testname',
                 animalId: [0],
-                userId: 0,
+                userId: 1,
                 isAdmin: false,
                 picture: '',
                 animals: [   

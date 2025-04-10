@@ -15,8 +15,9 @@
 
 function loggedInNavBarView() {
     //gå igjennom useres og se hvem som har login = true
-    let loggedInUser = model.data.users.find((user) => user.isLoggedIn == true);
-    
+   // let loggedInUser = model.data.users.find((user) => user.isLoggedIn == true);
+   let loggedInUser = getUser(); 
+
     let navBarHtml = /*HTML*/`
         <div class="navLeft">
             <div class="logo" onclick="model.app.currentPage = 'frontPage'; updateView();">Playdate</div>
@@ -28,6 +29,19 @@ function loggedInNavBarView() {
         </div>
     `;
     return navBarHtml;
+}
+
+function getUser() {
+let user = ""   
+for (let i=0; i < model.data.users.length; i++)
+{
+    if (model.data.users[i].isLoggedIn == true){
+        user = model.data.users[i];
+        break;
+    }
+} 
+return user;
+
 }
 
 function footerView() {

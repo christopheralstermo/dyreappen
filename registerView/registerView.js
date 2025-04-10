@@ -45,6 +45,11 @@ function checkRegistration(){
             || model.inputs.registerForm.email != model.data.users[i].email || model.inputs.registerForm.username != model.data.users[i].username && model.inputs.registerForm.email != model.data.users[i].email) {//denne ikke kjører?
             console.log("i check register else")
             registerUser();
+            navigate('frontPage');
+            model.data.users[i].isLoggedIn = true; // Update the logged-in state of this user
+            loggedInNavBarView();
+            updateView();
+
             break;
              //lagre registrert bruker i model (til browser refresher)
           

@@ -1,7 +1,7 @@
 function updateView() {
     console.log('Oppdaterer visningen...')
     document.getElementById('app').innerHTML = /*HTML*/`
-        <div class="navBarContainer">${model.app.isLoggedIn ? loggedInNavBarView() : navBarView()}</div>
+        <div class="navBarContainer">${model.app.loggedInId ? loggedInNavBarView() : navBarView()}</div>
         <div class="mainContainer">${contentManager()}</div>
         <div class="footerContainer">${footerView}</div>
     `;
