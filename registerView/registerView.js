@@ -31,30 +31,24 @@ function registerView() {
 
 function checkRegistration(){
     //sjekke om det eksisterer en bruker
+    let existingUser = false;
     console.log("chec reg stuff kjører");
     for(let i = 0; i < model.data.users.length; i++){
         console.log(" getting loopy..")
         if( model.inputs.registerForm.username == model.data.users[i].username
-            || model.inputs.registerForm.email == model.data.users[i].email || model.inputs.registerForm.username == model.data.users[i].username && model.inputs.registerForm.email == model.data.users[i].email
+            || model.inputs.registerForm.email == model.data.users[i].email
         ){
-            alert('Bruker eksisterer allerede');
-            navigate('registerView')
+            existingUser= true
+            return  alert('Bruker eksisterer allerede');
+            
      
         }
-        else if( model.inputs.registerForm.username != model.data.users[i].username
-            || model.inputs.registerForm.email != model.data.users[i].email || model.inputs.registerForm.username != model.data.users[i].username && model.inputs.registerForm.email != model.data.users[i].email) {//denne ikke kjører?
-            console.log("i check register else")
-            registerUser();
-            navigate('frontPage');
-            model.data.users[i].isLoggedIn = true; // Update the logged-in state of this user
-            loggedInNavBarView();
-            updateView();
-
-            break;
-             //lagre registrert bruker i model (til browser refresher)
-          
-            //evt 404 eller feil passord / brukernavn view her
-        }
+    
+    } 
+    if (existingUser == false){
+        console.log("i check register else")
+        registerUser();
+        navigate('frontPage'); // Update the logged-in state of this user
     }
 }
 

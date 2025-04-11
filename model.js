@@ -18,15 +18,18 @@ const model = {
         },
 
         registerForm: {
+            userId: null,
             name: '',
             lastName: '',
             email: '',
             username: '',
             password: '',
             repeatPassword: '',
-            animal: '',
-            picture: null,
-            isLoggedIn: false,
+            animal: [],
+            animalId: [],
+            isAdmin: false,
+            picture: '',
+            isLoggedIn: true,
         },
         
         info: 
