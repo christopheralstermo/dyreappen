@@ -1,8 +1,11 @@
 const model = {
     app: {
-        currentPage: 'frontPage',
+        currentPage: 'meldingView',
 
         loggedInId: null,
+        mldFunk: false,
+        recieverId: null,
+        senderId: null,
     },
     
     inputs: {
@@ -31,6 +34,11 @@ const model = {
             picture: '',
             isLoggedIn: true,
         },
+
+        messages: {
+            messageStorage: null,
+            messageBeeingOpened: null,
+        },
         
         info: 
             {
@@ -56,12 +64,12 @@ const model = {
             rating: null,
             comment:``,
         },
-        messages: {
-            sender:"",
-            receiver: "",
-            message: "",
-            date: new Date().toISOString().split('T')[0], // Dagens dato
-        },
+        // messages: {
+        //     sender:"",
+        //     receiver: "",
+        //     message: "",
+        //     date: new Date().toISOString().split('T')[0], // Dagens dato
+        // },
         
 
         notifications: {
@@ -77,6 +85,7 @@ const model = {
     },
 
     data: {
+        selectedLogin: [1],
         categories: {
             animals: ['katt', 'hund', 'fugl', 'hamster', 'slange'],
             
@@ -94,8 +103,8 @@ const model = {
                 password: '',
                 email: 'varino@getacademy.no',
                 name: 'Vårin',
-                animalId: [0],
-                userId: 0,
+                animalId: [1],
+                userId: 1,
                 isAdmin: false,
                 picture: '',
                 animals: [
@@ -115,34 +124,68 @@ const model = {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: false,
+                isLoggedIn: true,
+                message: [],
+                messageSender: [],
             },
             {
                 username: 'test',
                 password: '123',
                 email: 'testmail@test.no',
                 name: 'testname',
-                animalId: [0],
-                userId: 1,
+                animalId: [1],
+                userId: 2,
                 isAdmin: false,
                 picture: '',
                 animals: [   
                 ],
                 isLoggedIn: false,
-            }
-
-        ],
-
-
-        messages: [
-            {
-                messageId: 0,
-                sender: 'varinlinnea',
-                receiver: 'anonym',
-                message: 'Hei, vil gjerne sette opp en playdate med dere :)',
-                date: '2021-05-24',
+                message: [],
+                messageSender: [],
             },
+            {
+                username: 'Ronny',
+                password: '123',
+                email: 'testmail@test.no',
+                name: 'Ronny',
+                animalId: [1],
+                userId: 3,
+                isAdmin: false,
+                picture: '',
+                animals: [   
+                ],
+                isLoggedIn: false,
+                message: [],
+                messageSender: [],
+            },
+            {
+                username: 'Anne',
+                password: '123',
+                email: 'testmail@test.no',
+                name: 'Anne',
+                animalId: [1],
+                userId: 4,
+                isAdmin: false,
+                picture: '',
+                animals: [   
+                ],
+                isLoggedIn: false,
+                message: [],
+                messageSender: [],
+            },
+
         ],
+
+
+        // messages: [
+        //     {
+        //         messageId: 0,
+        //         sender: 'varinlinnea',
+        //         receiver: 'anonym',
+        //         message: 'Hei, vil gjerne sette opp en playdate med dere :)',
+        //         date: '2021-05-24',
+        //     },
+        // ],
 
         notifications: [
             {

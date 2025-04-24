@@ -2,36 +2,75 @@ function meldingView(){
     return /*HTML*/`
         <div id="messageSection" class="container">
             <h2>Forum</h2>
-            <input type="text" placeholder="Sender" value="${model.inputs.messages.sender}" oninput="updateInput('sender', this.value)">
+                ${theSenderHtml()}
             <br>
-            <input type="text" placeholder="Mottaker" value="${model.inputs.messages.receiver}" oninput="updateInput('receiver', this.value)">
+            
+                ${theRecievers()}
+            </select>
             <br>
-            <textarea placeholder="Skriv Melding ..." oninput="updateInput('message', this.value)">${model.inputs.messages.message}</textarea>
-            <br>
-            <input type="date" value="${model.inputs.messages.date}" oninput="updateInput('date', this.value)">
-            <br>
+            <textarea placeholder="Skriv Melding ..." onchange="model.inputs.messages.messageStorage = this.value; this.value = ''"></textarea>
             <button onclick="sendMessage()">Send Melding</button> 
-        </div>
-        <div id="messageSection" class="container">
-            <h3>Sendte Meldinger</h3>
-            ${sendQuickMessages()}
         </div>
     `;
 }
 
 
-function sendQuickMessages(){
- return model.data.messages.map(msg=>`
-   <p> strong> Til: ${msg.receiver}</strong> - <em>${msg.date}<</em>:${msg.messge}</p>`
-   ).join("<br>"); //slår sammen uten mellomrom
-   // <em> signaliserer også semantisk at ordet eller setningen er viktig,
- }
- 
- 
- function sendQuickMessages(){
-    const users= ["Roger", "Bella", "Arne", "Ruffen", "Oliver"];
-    return users.map(user => `
-        <button onclick=sendQuickMessage('${user}')"> Send Melding til ${user}</button>
-        `).join("<br>");//slår sammen med linjeskift
+function theSenderHtml() {
+    let html = '<div style="border: solid lightgray; width: 200px; text-align: center;">';
+    let brukere = model.data.users; 
+    for(let bruker of brukere){
+        if(bruker.isLoggedIn){
+            html += `${bruker.username}`;
+        };
+    };
+    html += '</div>';
+    return html;
 }
+
+
+function theRecievers() {
+    let html = '<div><select><option disabled selected>Brukere</option>';
+    for(let bruker of model.data.users){
+        if(!bruker.isLoggedIn){
+            html += `<option>${bruker.name}</option>`;
+        };
+    };
+    html += '</select></div>';
+    return html;
+}
+
+
+
+//--------------
+
+function sendMessage(user){
+    // noe greier
+    console.log(model.inputs.messages.messageStorage)
+}
+
+// function updateInput(field, value){
+//     model.inputs.messages[field] = value;
+// }
+
+// function sendMessage(){
+//     if (!model.inputs.messages.receiver || !model.inputs.messages.message)
+//         { 
+//             alert("Vennligst fyll ut alle feltene!");
+//             return;
+//     }
+//     model.data.messages.push({
+//         massageId: model.data.messages.length,
+//         sender: "varinlinnea",
+//         reveiver: model.inputs.messages.receiver,
+//         messge: model.inputs.messages.message,
+//         date: model.inputs.messages.date,
+//     })
+
+// // Nullstill inputfeltene
+// model.inputs.messages.sender="";
+// model.inputs.messages.receiver="";
+// model.inputs.messages.message="";
+// model.inputs.messages.date=new Date().toISOString().split('T')[0];
+// updateView();
+// }
 
