@@ -35,7 +35,7 @@ function areaHtml() {
         <h3>Område</h3>
     `;
 
-    for (let counties of model.data.categories.counties) {
+    for (let counties of model.data.categories.counties.sort()) {
         html += /*HTML*/`
         <label>
             <input 
@@ -66,53 +66,33 @@ function updateCountyFilter(counties, isChecked){
 function animalProfileHtml() {
     let html = /*html*/`<div class="profiles">`;
     let index = 0;
+    let dyreLista = model.inputs.filters.selectedAnimals;
+    let fylkeLista = model.inputs.filters.selectedCounties;
 
-    let allAnimals = [];
-    for (let user of model.data.users) {
-        if (user.animals && Array.isArray(user.animals)) { 
-            allAnimals = allAnimals.concat(user.animals);
-        }
+    for(bruker of model.data.users){
+        if ((dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
+            (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location))){
+                
+            html += /*html*/`
+            <div class="profile-card">
+                <h3 id="ask">Be om å leke med </h3>
+                <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bruker.animals[0].picture}"></div>
+                <div class="profile-details">
+                    <p>Owner: ${bruker.name}</p>
+                    <p>${bruker.animals[0].name} - ${bruker.animals[0].animal}</p>
+                    <p>${bruker.animals[0].age}</p>
+                    <p>${bruker.animals[0].location}</p>
+                    <p>vil møte: hund, katt</p>
+                </div>
+                <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
+            </div>
+            `;
+        };
     }
 
-    let filteredAnimals = allAnimals.filter(animal => {
-        const matchesAnimal = model.inputs.filters.selectedAnimals.length === 0 || 
-            model.inputs.filters.selectedAnimals.includes(animal.animal);
-
-        const matchesCounty = model.inputs.filters.selectedCounties.length === 0 || 
-            model.inputs.filters.selectedCounties.includes(animal.location);
-        return matchesAnimal && matchesCounty;
-    });
-
-    for (let theAnimal of filteredAnimals) {
-
-        let dyrenavn = theAnimal.name;
-        let alder = theAnimal.age;
-        let art = theAnimal.animal;
-        let bildet = theAnimal.picture;
-        let lokasjon = theAnimal.location;
-
-        html += /*html*/`
-        <div class="profile-card">
-            <h3 id="ask">Be om å leke med ${dyrenavn}</h3>
-            <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bildet}"></div>
-            <div class="profile-details">
-                <p>${dyrenavn} - ${art}</p>
-                <p>${alder}</p>
-                <p>${lokasjon}</p>
-                <p>vil møte: hund, katt</p>
-            </div>
-            <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
-            <div class="stars" data-rating="5" onclick="navigate('ratingView')">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-        </div>
-        `;
-
-        index++;
-    }
-    html += '</div>';
+    html += '</div></div><br><br><br>';
     return html;
-}
+};
 
 
 function updateFilter(animal, isChecked) {

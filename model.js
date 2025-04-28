@@ -85,6 +85,7 @@ const model = {
     },
 
     data: {
+        selectedLogin: [1],
         categories: {
             animals: ['katt', 'hund', 'fugl', 'hamster', 'slange'],
             
@@ -123,7 +124,7 @@ const model = {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: false,
+                isLoggedIn: true,
                 message: [],
                 messageSender: [],
             },
@@ -136,9 +137,24 @@ const model = {
                 userId: 2,
                 isAdmin: false,
                 picture: '',
-                animals: [   
+                animals: [
+                    {
+                        name: 'Pettern',
+                        age: 14,
+                        animal: 'hund',
+                        animalBreed: '',
+                        kg: '',
+                        sex: 'male',
+                        favouriteActivities: ['sove', 'spise'],
+                        location: 'Oslo',
+                        readyForPlay: true,
+                        healthInformation: 'frisk',
+                        availability: '',
+                        picture: null,
+                        rating: 0,
+                    },
                 ],
-                isLoggedIn: true,
+                isLoggedIn: false,
                 message: [],
                 messageSender: [],
             },
@@ -151,7 +167,22 @@ const model = {
                 userId: 3,
                 isAdmin: false,
                 picture: '',
-                animals: [   
+                animals: [  
+                    {
+                        name: 'Roar',
+                        age: 14,
+                        animal: 'fugl',
+                        animalBreed: '',
+                        kg: '',
+                        sex: 'male',
+                        favouriteActivities: ['sove', 'spise'],
+                        location: 'Vestfold',
+                        readyForPlay: true,
+                        healthInformation: 'frisk',
+                        availability: '',
+                        picture: null,
+                        rating: 0,
+                    }, 
                 ],
                 isLoggedIn: false,
                 message: [],
@@ -166,7 +197,22 @@ const model = {
                 userId: 4,
                 isAdmin: false,
                 picture: '',
-                animals: [   
+                animals: [
+                    {
+                        name: 'Kjell',
+                        age: 14,
+                        animal: 'slange',
+                        animalBreed: '',
+                        kg: '',
+                        sex: 'male',
+                        favouriteActivities: ['sove', 'spise'],
+                        location: 'Østfold',
+                        readyForPlay: true,
+                        healthInformation: 'frisk',
+                        availability: '',
+                        picture: null,
+                        rating: 0,
+                    },
                 ],
                 isLoggedIn: false,
                 message: [],
