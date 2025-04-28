@@ -65,20 +65,21 @@ function updateCountyFilter(counties, isChecked){
 
 function animalProfileHtml() {
     let html = /*html*/`<div class="profiles">`;
-    let index = 0;
     let dyreLista = model.inputs.filters.selectedAnimals;
     let fylkeLista = model.inputs.filters.selectedCounties;
+    let brukerSomErLoggetInn = model.app.loggedInId;
 
     for(bruker of model.data.users){
         if ((dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
-            (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location))){
-                
+            (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location)) &&
+            (brukerSomErLoggetInn === null)
+        ){
             html += /*html*/`
             <div class="profile-card">
                 <h3 id="ask">Be om å leke med </h3>
                 <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bruker.animals[0].picture}"></div>
                 <div class="profile-details">
-                    <p>Owner: ${bruker.name}</p>
+                    <p>Owner: ${bruker.username}</p>
                     <p>${bruker.animals[0].name} - ${bruker.animals[0].animal}</p>
                     <p>${bruker.animals[0].age}</p>
                     <p>${bruker.animals[0].location}</p>
@@ -87,6 +88,29 @@ function animalProfileHtml() {
                 <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
             </div>
             `;
+        } else if(
+            (dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
+            (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location)) &&
+            (brukerSomErLoggetInn !== null)
+        ) {
+            if(bruker.userId === brukerSomErLoggetInn){
+                html += '';
+            }else{
+                html += /*html*/`
+            <div class="profile-card">
+                <h3 id="ask">Be om å leke med </h3>
+                <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bruker.animals[0].picture}"></div>
+                <div class="profile-details">
+                    <p>Owner: ${bruker.username}</p>
+                    <p>${bruker.animals[0].name} - ${bruker.animals[0].animal}</p>
+                    <p>${bruker.animals[0].age}</p>
+                    <p>${bruker.animals[0].location}</p>
+                    <p>vil møte: hund, katt</p>
+                </div>
+                <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
+            </div>
+            `;
+            }
         };
     }
 
