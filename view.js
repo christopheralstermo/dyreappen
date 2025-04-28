@@ -31,6 +31,9 @@ function contentManager() {
         case 'meldingView':
             html = meldingView();
             break;   
+        case 'userView':
+            html = userView();
+            break;   
     }
     return html;
 }

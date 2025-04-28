@@ -1,8 +1,8 @@
 const model = {
     app: {
-        currentPage: 'meldingView',
+        currentPage: 'userView',
 
-        loggedInId: null,
+        loggedInId: 2,
         mldFunk: false,
         recieverId: null,
         senderId: null,
@@ -85,7 +85,6 @@ const model = {
     },
 
     data: {
-        selectedLogin: [1],
         categories: {
             animals: ['katt', 'hund', 'fugl', 'hamster', 'slange'],
             
@@ -124,7 +123,7 @@ const model = {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: true,
+                isLoggedIn: false,
                 message: [],
                 messageSender: [],
             },
@@ -139,7 +138,7 @@ const model = {
                 picture: '',
                 animals: [   
                 ],
-                isLoggedIn: false,
+                isLoggedIn: true,
                 message: [],
                 messageSender: [],
             },
