@@ -1,8 +1,8 @@
 const model = {
     app: {
-        currentPage: 'userView',
+        currentPage: 'frontPage',
 
-        loggedInId: 2,
+        loggedInId: null,
         mldFunk: false,
         recieverId: null,
         senderId: null,
