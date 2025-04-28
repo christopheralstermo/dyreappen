@@ -13,7 +13,12 @@ function navBarView() {
  
  function loggedInNavBarView() {
      //gå igjennom useres og se hvem som har login = true
-    let loggedInUser = model.data.users.find((user) => user.isLoggedIn == true);
+    let loggedInUser;
+    for(bruker of model.data.users){
+     if(bruker.userId === model.app.loggedInId){
+         loggedInUser = bruker.name;
+     }
+    }
  //    let loggedInUser = getUser(); 
  
      let navBarHtml = /*HTML*/`
@@ -23,7 +28,7 @@ function navBarView() {
          <div class="navRight">
              <div>${createNotificationWindow()}</div>
              <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
-             <button class="navBtn" onclick="model.app.currentPage = 'userView'; updateView();">Hei, ${loggedInUser.username}</button>
+             <button class="navBtn" onclick="model.app.currentPage = 'userView'; updateView();">Hei, ${loggedInUser}</button>
              <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
              <button class="navBtn" onclick="model.app.loggedInId = null; model.app.currentPage = 'frontPage';updateView()">Logg ut</button>
          </div>
