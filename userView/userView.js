@@ -3,10 +3,10 @@ function userView() {
 
     return /*HTML*/`
     <div>
-        <h1>Hei, ${loggedInUser.username}</h1>
+        <h1>Min profil</h1>
         <br>
         <div class="flex-container">
-            <div>${userInfoRows()}</div>
+            <div>${userInfoRows(loggedInUser)}</div>
             <div class="upload-container">
                 <label for="profile-picture">Upload Picture:</label>
                 <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="handleImageUpload(event)">
@@ -19,55 +19,43 @@ function userView() {
     `;
 }
 
-function userInfoRows() {
+function userInfoRows(loggedInUser) {
     let infoRowsHtml = '';
-    for (const [key, value] of Object.entries(model.inputs.info)) {
-        if (key === 'animal' || key === 'location') {
-            infoRowsHtml += /*HTML*/`
+            infoRowsHtml = /*HTML*/`
                 <tr>
-                    <td>${key}</td>
-                    <td>
-                        <select onchange="updateInfo('${key}', this.value)">
-                            <option value="">Velg ${key === 'animal' ? 'dyr' : 'sted'}</option>
-            `;
-            const optionsList = key === 'animal' ? model.data.categories.animals : model.data.categories.counties;
-            for (let option of optionsList) {
-                infoRowsHtml += /*HTML*/`
-                    <option value="${option}" ${value === option ? 'selected' : ''}>
-                        ${option}
-                    </option>
-                `;
-            }
-            infoRowsHtml += /*HTML*/`
-                        </select><br><br>
-                    </td>
+                    <td> Navn: <input value="${loggedInUser.name}"></td>
+                    <br>
+                    <td> Brukernavn: <input value="${loggedInUser.username}"></td>
+                    <br>
+                    <td>Passord: <input type="password" id="password" name="password" value="${loggedInUser.password}">
+                    <br>
+                    <td> Email: <input value="${loggedInUser.email}"></td>
+                    <br>
+                    <button onclick="changePassword()">Endre passord</button>
+                    <br>
+                    <td colspan="2">
+                    <br>
+                    <button onclick="saveProfile()">Lagre</button>
+                    <br>
+                    <br>
+                    <td> <button onclick="goToCreateAnimalProfile()">Registrer dyreprofil</button></td>
+                    <br>
+                </td>
+                 
                 </tr>
             `;
-        } else {
-            infoRowsHtml += /*HTML*/`
-                <tr>
-                    <td>${key}</td>
-                    <td>
-                        <input 
-                            type="text" 
-                            placeholder="Skriv her" 
-                            value="${value || ''}"
-                            oninput="updateInfo('${key}', this.value)"
-                        /><br><br>
-                    </td>
-                </tr>
-            `;
-        }
-    }
-    infoRowsHtml += /*HTML*/`
-        <tr>
-            <td colspan="2">
-                <button onclick="saveAnimal()">Registrer</button>
-            </td>
-        </tr>
-    `;
     return infoRowsHtml;
 }
+
+function saveProfile() {
+    
+}
+
+function goToCreateAnimalProfile() {
+    model.app.currentPage = 'createAnimalProfile'; // Gå til animalProfileView
+    updateView();
+}
+
 
 function changePage(newPage) {
     model.app.currentPage = newPage;
