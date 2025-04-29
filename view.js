@@ -3,7 +3,7 @@ function updateView() {
     document.getElementById('app').innerHTML = /*HTML*/`
         <div class="navBarContainer">${model.app.loggedInId ? loggedInNavBarView() : navBarView()}</div>
         <div class="mainContainer">${contentManager()}</div>
-        <div class="footerContainer">${footerView}</div>
+        <div class="footerContainer">${footerView()}</div>
     `;
     }
 
@@ -33,6 +33,9 @@ function contentManager() {
             break;   
         case 'userView':
             html = userView();
+            break;   
+        case 'footerView':
+            html = footerView();
             break;   
     }
     return html;
