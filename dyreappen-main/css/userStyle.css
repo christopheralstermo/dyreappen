@@ -1,0 +1,54 @@
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    gap: 5px; /* Add spacing between input fields */
+    width: 100%; /* Ensure consistent width */
+}
+
+.input-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make input fields stretch to the container width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: pink;
+}
