@@ -9,7 +9,7 @@ function logInView() {
     <label for="password">Passord:</label>
     <input type="password" id="password" name="password" oninput="model.inputs.loginForm.password = this.value" required>
     
-    <button onclick="checkLogIn()"> Log In </button>
+    <button onclick="checkLogIn()"> Logg Inn </button>
     </form>
     <p id="errorMessage" class="error"></p>
     <p>Har du ikke konto? <button onclick="navigate('registerView')" class="link-button">Registrer deg her!</button></p>
