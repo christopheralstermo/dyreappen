@@ -132,7 +132,7 @@ editUser: {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: true,
+                isLoggedIn: false,
                 message: [],
                 messageSender: [],
             },
