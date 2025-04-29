@@ -34,9 +34,6 @@ function contentManager() {
         case 'userView':
             html = userView();
             break;   
-        case 'footerView':
-            html = footerView();
-            break;   
     }
     return html;
 }

@@ -1,5 +1,7 @@
 #footerContainer {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     padding: 10px 20px;
     background-color: #f8f8f8;
@@ -8,25 +10,27 @@
     box-sizing: border-box;
 }
 
-#footerContainer a {
-    color: lightgray;
-    text-decoration: none;
-    margin: 0 10px;
+.footer-text {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
 }
 
-#footerContainer a:hover {
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 14px;    
+}
+
+.footer-links:hover {
     text-decoration: underline;
 }
 
-body {
-    overflow-x: hidden;
-}
-
-html, body {
-    height: 100%;
-}
-
 .mainContainer {
-    min-height: calc(100vh - 100px);
-    padding-bottom: 20px;
+    min-height: calc(100vh - 60px);
+    padding-bottom: 0;
 }
