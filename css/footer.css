@@ -1,7 +1,5 @@
 #footerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     text-align: center;
     padding: 10px 20px;
     background-color: #f8f8f8;
@@ -10,27 +8,25 @@
     box-sizing: border-box;
 }
 
-.footer-text {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-}
-
-.footer-links {
-    display: flex;
-    gap: 15px;
-}
-
-.footer-links a {
+#footerContainer a {
+    color: lightgray;
     text-decoration: none;
-    font-size: 14px;    
+    margin: 0 10px;
 }
 
-.footer-links:hover {
+#footerContainer a:hover {
     text-decoration: underline;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
 .mainContainer {
-    min-height: calc(100vh - 60px);
-    padding-bottom: 0;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 20px;
 }

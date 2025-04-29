@@ -21,23 +21,20 @@ function userView() {
 
 function userInfoRows(loggedInUser) {
     let infoRowsHtml = '';
-            infoRowsHtml = /*HTML*/`
+        infoRowsHtml = /*HTML*/`
                 <tr>
                     <td> Navn: <input value="${loggedInUser.name}"></td>
                     <br>
                     <td> Brukernavn: <input value="${loggedInUser.username}"></td>
                     <br>
-                    <td>Passord: <input type="password" id="password" name="password" value="${loggedInUser.password}">
+                    <td>Passord: <input type="password" id="password" value="${loggedInUser.password}">
                     <br>
                     <td> Email: <input value="${loggedInUser.email}"></td>
                     <br>
-                    <button onclick="changePassword()">Endre passord</button>
-                    <br>
-                    <td colspan="2">
-                    <br>
+                    <button onclick="goToChangePassword()">Endre passord</button>
+                    <br> <br>
                     <button onclick="saveProfile()">Lagre</button>
-                    <br>
-                    <br>
+                    <br> <br>
                     <td> <button onclick="goToCreateAnimalProfile()">Registrer dyreprofil</button></td>
                     <br>
                 </td>
@@ -55,6 +52,11 @@ function goToCreateAnimalProfile() {
     model.app.currentPage = 'createAnimalProfile'; // Gå til animalProfileView
     updateView();
 }
+
+function goToChangePassword(){
+    model.app.currentPage = 'changePassword'; // Gå til changePassword
+    updateView();
+}    
 
 
 function changePage(newPage) {

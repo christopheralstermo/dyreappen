@@ -2,7 +2,7 @@ const model = {
     app: {
         currentPage: 'frontPage',
 
-        loggedInId: null,
+        loggedInId: 2,
         mldFunk: false,
         recieverId: null,
         senderId: null,
@@ -162,7 +162,7 @@ editUser: {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: false,
+                isLoggedIn: true,
                 message: [],
                 messageSender: [],
             },
