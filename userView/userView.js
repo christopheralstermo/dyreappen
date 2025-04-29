@@ -27,7 +27,7 @@ function userInfoRows(loggedInUser) {
                     <br>
                     <td> Brukernavn: <input value="${loggedInUser.username}"></td>
                     <br>
-                    <td>Passord: <input type="password" id="password" value="${loggedInUser.password}">
+                    <td>Passord: <input type="password" id="password" value="${loggedInUser.password}" readonly>
                     <br>
                     <td> Email: <input value="${loggedInUser.email}"></td>
                     <br>
