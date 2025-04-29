@@ -69,7 +69,7 @@ function animalProfileHtml() {
     let fylkeLista = model.inputs.filters.selectedCounties;
     let brukerSomErLoggetInn = model.app.loggedInId;
 
-    for(bruker of model.data.users){
+    for(let bruker of model.data.users){
         if ((dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
             (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location)) &&
             (brukerSomErLoggetInn === null)
