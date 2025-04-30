@@ -1,60 +1,71 @@
 #messageSection {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Clean white background */
+    background-color: #e8f5e9; /* Lys grønn bakgrunn */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Added padding for better spacing */
-    margin: 0 auto; /* Center the section horizontally */
-    max-width: 600px; /* Limit the width for better responsiveness */
-    height: auto; /* Adjust height to fit content */
-    border-radius: 10px; /* Softer border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px; /* Runde kanter */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Myk skygge */
 }
 
 #messageSection input,
 #messageSection textarea {
     width: 100%;
-    padding: 10px; /* Increased padding for better usability */
+    padding: 12px; /* Økt padding for bedre brukervennlighet */
     margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd; /* Subtle border */
-    font-size: 14px; /* Slightly larger font for readability */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
-    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+    border-radius: 10px; /* Runde kanter */
+    border: 2px solid #66bb6a; /* Lys grønn ramme */
+    font-size: 14px;
+    color: #333;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for dybde */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 #messageSection input:focus,
 #messageSection textarea:focus {
-    border-color: #45a049; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #81c784; /* Lysere grønn ved fokus */
+    background-color: #f1f8e9; /* Svært lys grønn */
+    outline: none; /* Fjern standard outline */
 }
 
 #messageSection textarea {
-    height: 100px; /* Adjusted height for better usability */
-    resize: none; /* Prevent resizing for consistent layout */
+    height: 120px; /* Justert høyde for bedre brukervennlighet */
+    resize: vertical; /* Tillat vertikal resizing */
 }
 
 #messageSection button {
     width: 100%;
-    padding: 12px; /* Increased padding for better clickability */
+    padding: 12px;
     margin-top: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px; /* Runde kanter */
     cursor: pointer;
-    background-color: #4CAF50; /* Green for submit */
+    background-color: #66bb6a; /* Lys grønn */
     color: white;
-    font-size: 16px; /* Larger font for buttons */
-    font-weight: bold; /* Make the text stand out */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #messageSection button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.02); /* Slightly enlarge on hover */
+    background-color: #81c784; /* Lysere grønn ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
 }
 
 #messageSection button:active {
-    transform: scale(0.98); /* Slightly shrink on click */
+    transform: scale(0.98); /* Liten krymping ved klikk */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
 }

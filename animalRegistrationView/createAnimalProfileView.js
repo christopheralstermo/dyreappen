@@ -1,16 +1,19 @@
 function createAnimalProfileView() {
     return /*HTML*/`
-    <div>
-        <h1>Registrer dyr</h1>
-        <br>
-        <div class="flex-container">
-            <div>${getInputRows()}</div>
-            <div class="upload-container">
-                <label for="profile-picture">Upload Picture:</label>
-                <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="handleImageUpload(event)">
-                <div class="preview">
-                    <p>No image selected</p>
-                </div>
+    <div class="form-container">
+        <!-- Venstre seksjon: Skjema -->
+        <form onsubmit="saveAnimal(); return false;">
+            <h1 class="form-title">Registrer dyr</h1>
+            ${getInputRows()}
+            <button type="submit" class="submit-btn">Registrer</button>
+        </form>
+
+        <!-- Høyre seksjon: Bildeopplasting -->
+        <div class="upload-container">
+            <label for="profile-picture">Last opp bilde:</label>
+            <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="handleImageUpload(event)">
+            <div class="preview">
+                <p>Ingen bilde valgt</p>
             </div>
         </div>
     </div>
@@ -57,13 +60,6 @@ function getInputRows() {
             `;
         }
     }
-    inputRowsHtml += /*HTML*/`
-        <tr>
-            <td colspan="2">
-                <button onclick="saveAnimal()">Registrer</button>
-            </td>
-        </tr>
-    `;
     return inputRowsHtml;
 }
 

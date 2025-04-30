@@ -1,5 +1,66 @@
-body, html { /*body dekker hele siden*/
+/* Global stil for hele applikasjonen */
+
+/* CSS-variabler for farger */
+:root {
+    --primary-color: #66bb6a; /* Lys grønn */
+    --primary-hover-color: #81c784; /* Lysere grønn */
+    --secondary-color: #e8f5e9; /* Svært lys grønn */
+    --text-color: #333; /* Standard tekstfarge */
+    --heading-color: #388e3c; /* Mørk grønn */
+}
+
+/* Reset-stiler */
+* {
     margin: 0;
-    height: 100%;
-    -webkit-text-size-adjust: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color); /* Lys grønn bakgrunn */
+    color: var(--text-color); /* Standard tekstfarge */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Standard stiler for overskrifter */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color); /* Mørk grønn */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Standard stiler for lenker */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover-color);
+    text-decoration: underline;
+}
+
+/* Standard knappestiler */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }

@@ -1,0 +1,67 @@
+#userProfile {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Lys grønn bakgrunn */
+    padding: 40px; /* Økt padding for mer luft */
+    margin: 20px auto; /* Sentrer seksjonen med litt margin */
+    max-width: 800px; /* Økt bredde for å fylle mer av siden */
+    border-radius: 15px; /* Runde kanter */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Mykere og dypere skygge */
+}
+
+#userProfile h1 {
+    font-size: 28px; /* Større font for overskriften */
+    color: #388e3c; /* Mørk grønn */
+    text-align: center;
+    margin-bottom: 20px; /* Mer luft under overskriften */
+}
+
+#userProfile img {
+    width: 200px; /* Større bilde */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Runde kanter for profilbildet */
+    margin: 20px auto;
+    display: block;
+    border: 4px solid #66bb6a; /* Lys grønn ramme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge rundt bildet */
+}
+
+#userProfile .details {
+    font-size: 18px; /* Større tekst for detaljer */
+    color: #555;
+    margin: 15px 0;
+    text-align: center;
+    line-height: 1.6; /* Bedre linjeavstand for lesbarhet */
+}
+
+#userProfile .details p {
+    margin: 10px 0; /* Mellomrom mellom detaljlinjene */
+}
+
+#userProfile .actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Mellomrom mellom knappene */
+    margin-top: 30px;
+}
+
+#userProfile .actions button {
+    background-color: #66bb6a; /* Lys grønn */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px; /* Runde kanter */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#userProfile .actions button:hover {
+    background-color: #81c784; /* Lysere grønn ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
+}
+
+#userProfile .actions button:active {
+    transform: scale(0.95); /* Liten krymping ved klikk */
+}

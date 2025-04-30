@@ -1,21 +1,32 @@
 #footerContainer {
+    display: flex;
+    justify-content: space-between; /* Plasserer tekst til venstre og lenker til høyre */
+    align-items: center; /* Justerer elementene vertikalt */
     position: relative;
-    text-align: center;
     padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-top: 1px solid #ddd;
+    background-color: #4caf50; /* Grønn bakgrunn */
+    border-top: 3px solid #388e3c; /* Mørkere grønn for kontrast */
     width: 100%;
     box-sizing: border-box;
+    color: white; /* Hvit tekst for kontrast */
+    font-size: 14px;
 }
 
 #footerContainer a {
-    color: lightgray;
+    color: #c8e6c9; /* Lys grønn tekst */
     text-decoration: none;
-    margin: 0 10px;
+    padding: 0 10px;
+    transition: color 0.3s ease; /* Myk overgang for hover */
 }
 
 #footerContainer a:hover {
+    color: #ffffff; /* Hvit tekst ved hover */
     text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px; /* Økt mellomrom mellom lenkene */
 }
 
 body {
@@ -27,6 +38,6 @@ html, body {
 }
 
 .mainContainer {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px); /* Sørger for at footeren alltid er nederst */
     padding-bottom: 20px;
 }

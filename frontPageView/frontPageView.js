@@ -69,54 +69,39 @@ function animalProfileHtml() {
     let fylkeLista = model.inputs.filters.selectedCounties;
     let brukerSomErLoggetInn = model.app.loggedInId;
 
-    for(bruker of model.data.users){
-        if ((dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
-            (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location)) &&
-            (brukerSomErLoggetInn === null)
-        ){
-            html += /*html*/`
-            <div class="profile-card">
-                <h3 id="ask">Be om å leke med </h3>
-                <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bruker.animals[0].picture}"></div>
-                <div class="profile-details">
-                    <p>Owner: ${bruker.username}</p>
-                    <p>${bruker.animals[0].name} - ${bruker.animals[0].animal}</p>
-                    <p>${bruker.animals[0].age}</p>
-                    <p>${bruker.animals[0].location}</p>
-                    <p>vil møte: hund, katt</p>
-                </div>
-                <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
-            </div>
-            `;
-        } else if(
+    for (let bruker of model.data.users) {
+        if (
             (dyreLista.length === 0 || dyreLista.includes(bruker.animals[0].animal)) &&
             (fylkeLista.length === 0 || fylkeLista.includes(bruker.animals[0].location)) &&
-            (brukerSomErLoggetInn !== null)
+            (brukerSomErLoggetInn === null || bruker.userId !== brukerSomErLoggetInn)
         ) {
-            if(bruker.userId === brukerSomErLoggetInn){
-                html += '';
-            }else{
-                html += /*html*/`
+            html += /*html*/`
             <div class="profile-card">
-                <h3 id="ask">Be om å leke med </h3>
-                <div class="profile-image" style="height: 190px;"><img id="profilBildet" src="${bruker.animals[0].picture}"></div>
-                <div class="profile-details">
-                    <p>Owner: ${bruker.username}</p>
-                    <p>${bruker.animals[0].name} - ${bruker.animals[0].animal}</p>
-                    <p>${bruker.animals[0].age}</p>
-                    <p>${bruker.animals[0].location}</p>
-                    <p>vil møte: hund, katt</p>
+                <div class="profile-actions">
+                <button onclick="requestPlay('${bruker.userId}')">Be om å leke med</button>
                 </div>
-                <button id="profileBtn" onclick="navigate('animalProfile')">vis profil</button>
+                <div class="profile-name">
+                <p>Navn: ${bruker.animals[0].name}</p>
+                </div>
+                <div class="profile-image">
+                <img src="${bruker.animals[0].picture}" alt="${bruker.animals[0].name}">
+                </div>
+                <div class="profile-details">
+                <p>Eier: ${bruker.username}</p>
+                <p>Alder: ${bruker.animals[0].age}</p>
+                <p>Sted: ${bruker.animals[0].location}</p>
+                </div>
+                <div class="profile-actions">
+                    <button onclick="navigate('animalProfile')">Vis profil</button>
+                </div>
             </div>
             `;
-            }
-        };
+        }
     }
 
-    html += '</div></div><br><br><br>';
+    html += '</div>';
     return html;
-};
+}
 
 
 function updateFilter(animal, isChecked) {

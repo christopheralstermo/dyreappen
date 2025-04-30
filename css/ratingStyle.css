@@ -1,91 +1,102 @@
 #ratingSection {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Clean white background */
+    background-color: #e8f5e9; /* Lys grønn bakgrunn */
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; /* Stable elementene vertikalt */
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Reduced padding for a cleaner look */
-    margin: 50px auto; /* Center the section horizontally */
-    max-width: 400px; /* Limit the width for better responsiveness */
-    border-radius: 10px; /* Softer border radius */
-    border: 1px solid #ddd; /* Subtle border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: 20px;
+    margin: 50px auto; /* Sentrer seksjonen horisontalt */
+    max-width: 400px; /* Begrens bredde for responsivitet */
+    border-radius: 15px; /* Runde kanter */
+    border: 2px solid #66bb6a; /* Lys grønn ramme */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Myk skygge */
 }
 
 #ratingSection .card {
-    background: #f9f9f9; /* Light gray background for the card */
+    background: #ffffff; /* Hvit bakgrunn for kortet */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%; /* Full width within the container */
+    border-radius: 15px; /* Runde kanter */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
+    width: 100%; /* Full bredde innenfor containeren */
     text-align: center;
 }
 
 #ratingSection .stars {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Increased spacing between stars */
-    margin-bottom: 15px; /* More space below stars */
+    gap: 10px; /* Mellomrom mellom stjernene */
+    margin-bottom: 15px;
 }
 
 #ratingSection .star {
-    font-size: 30px; /* Larger stars for better visibility */
+    font-size: 30px; /* Store stjerner for synlighet */
     cursor: pointer;
-    color: #ccc; /* Default gray color */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #ccc; /* Standard grå farge */
+    transition: color 0.3s ease; /* Myk overgang for hover-effekt */
 }
 
 #ratingSection .star.active,
 #ratingSection .star:hover {
-    color: #f4c542; /* Gold color for active or hovered stars */
+    color: #f4c542; /* Gullfarge for aktive eller hoverede stjerner */
 }
 
 #ratingSection textarea {
     width: 100%;
-    height: 100px; /* Slightly taller for better usability */
+    height: 100px; /* Høyde for bedre brukervennlighet */
     margin-bottom: 15px;
-    padding: 10px; /* More padding for better text input experience */
-    border-radius: 5px;
-    border: 1px solid #ddd; /* Subtle border */
-    font-size: 14px; /* Slightly larger font */
-    resize: none; /* Prevent resizing for consistent layout */
+    padding: 10px;
+    border-radius: 10px; /* Runde kanter */
+    border: 2px solid #66bb6a; /* Lys grønn ramme */
+    font-size: 14px;
+    resize: none; /* Forhindre resizing for konsistent layout */
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#ratingSection textarea:focus {
+    border-color: #81c784; /* Lysere grønn ved fokus */
+    background-color: #f1f8e9; /* Svært lys grønn */
+    outline: none; /* Fjern standard outline */
 }
 
 #ratingSection button {
     width: 100%;
-    padding: 12px; /* Increased padding for better clickability */
+    padding: 12px;
     margin-top: 10px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px; /* Larger font for buttons */
+    border-radius: 20px; /* Runde kanter */
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #ratingSection .submitButton {
-    background-color: #4CAF50; /* Green for submit */
+    background-color: #66bb6a; /* Grønn for submit */
     color: white;
 }
 
 #ratingSection .submitButton:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #81c784; /* Lysere grønn ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
 }
 
 #ratingSection .blockButton {
-    background-color: #e74c3c; /* Red for block */
+    background-color: #e74c3c; /* Rød for blokkering */
     color: white;
 }
 
 #ratingSection .blockButton:hover {
-    background-color: #c0392b; /* Darker red on hover */
+    background-color: #c0392b; /* Mørkere rød ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
 }
 
 #ratingSection img {
-    width: 80px; /* Slightly smaller image */
+    width: 80px; /* Mindre bilde */
     height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px; /* More space below the image */
-    border: 2px solid #ddd; /* Subtle border around the image */
+    object-fit: cover; /* Sørg for at bildet fyller området uten forvrengning */
+    border-radius: 50%; /* Runde kanter for bildet */
+    margin-bottom: 15px;
+    border: 2px solid #66bb6a; /* Lys grønn ramme rundt bildet */
 }

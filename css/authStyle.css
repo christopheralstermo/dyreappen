@@ -1,122 +1,95 @@
-#registerContainer {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: #f1f1f1;
-    font-family: Arial, sans-serif;
-}
-
-#registerForm {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f2f2f2; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#registerForm h2 {
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-#registerForm label {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #555;
-}
-
-#registerForm input {
-    margin-bottom: 15px;
-    padding: 7px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(100% - 20px);
-}
-
-#registerForm button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#registerForm button:hover {
-    background-color: #45a049;
-}
-
+#registerContainer,
 #loginContainer {
     display: grid;
     place-items: center;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: #e8f5e9; /* Lys grønn bakgrunn */
     font-family: Arial, sans-serif;
 }
 
+#registerForm,
 #loginForm {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f2f2f2; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #66bb6a; /* Lys grønn ramme */
+    border-radius: 15px; /* Runde kanter */
+    background-color: #ffffff; /* Hvit bakgrunn */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Myk skygge */
 }
 
+#registerForm h2,
 #loginForm h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #388e3c; /* Mørk grønn */
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
+#registerForm label,
 #loginForm label {
     margin-bottom: 10px;
     font-weight: bold;
-    color: #555;
+    color: #388e3c; /* Mørk grønn */
+    font-size: 14px;
 }
 
+#registerForm input,
 #loginForm input {
     margin-bottom: 15px;
-    padding: 7px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #66bb6a; /* Lys grønn ramme */
+    border-radius: 10px; /* Runde kanter */
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+#registerForm input:focus,
+#loginForm input:focus {
+    border-color: #81c784; /* Lysere grønn ved fokus */
+    background-color: #f1f8e9; /* Svært lys grønn */
+    outline: none;
+}
+
+#registerForm button,
 #loginForm button {
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+    border-radius: 20px; /* Runde kanter */
+    background-color: #66bb6a; /* Lys grønn */
     color: white;
     font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+#registerForm button:hover,
 #loginForm button:hover {
-    background-color: #45a049;
+    background-color: #81c784; /* Lysere grønn ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
 }
 
 .link-button {
     cursor: pointer;
     text-decoration: underline;
+    color: #388e3c; /* Mørk grønn */
+    font-size: 14px;
 }
 
 .link-button:hover {
-    color: #007BFF;
+    color: #007BFF; /* Blå hover-effekt */
 }
 
 .error {
     color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
 }

@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: palevioletred;
+    background-color: lightseagreen;
     padding: 12px;
     margin: 0;
-    color: white;
+    color: #333;
+    border-bottom: 3px solid #388e3c;
 }
 
 .navRight {
@@ -15,18 +16,19 @@
 
 .navBtn {
     margin: 4px;
-    background-color: transparent;
+    background-color: #66bb6a;
     color: white;
     border: 0;
     padding: 8px 16px;
     cursor: pointer;
-    transition-duration: 0.4s;
-    border-radius: 2%;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    border-radius: 20px;
     font-weight: bold;
 }
 
 .navBtn:hover {
-    background-color: pink;
+    background-color: #81c784;
+    transform: scale(1.05);
 }
 
 /* ----- popup ---- */
@@ -34,15 +36,16 @@
 .notificationFrame {
     width: 300px;
     height: 500px;
-    border: solid gray;
-    border-radius: 10%;
-    background-color: gray;
+    border: solid #388e3c;
+    border-radius: 20px;
+    background-color: #a5d6a7;
     position: fixed; 
     top: 35%;
     right: 5%;
     transform: translate(-50%, -50%);
     display: none; 
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .exitNotification {
@@ -58,46 +61,52 @@
     position: absolute;
     right: 20px;
     top: 10px;
-    cursor: pointer; 
+    cursor: pointer;
+    background-color: #66bb6a; 
+    border-radius: 50%; 
 }
 
 .messages {
     margin-top: 80px;
     height: 360px;
-    background-color: aliceblue;
+    background-color: #e8f5e9;
     padding: 10px;
     overflow-y: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .message {
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-family: "Winky Sans", sans-serif;
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 2px #388e3c;
 }
 
 .footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #4caf50;
     height: 50px;
-    color: palevioletred;
+    color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #388e3c;
 }
 
 .footerLeft {
@@ -112,12 +121,17 @@
 
 .footerBtn {
     margin: 4px;
-    background-color: transparent;
-    color: palevioletred;
+    background-color: #66bb6a;
+    color: white;
     border: 0;
     padding: 8px 16px;
     cursor: pointer;
     transition-duration: 0.4s;
-    border-radius: 2%;
+    border-radius: 20px;
     font-weight: bold;
+}
+
+.footerBtn:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
 }

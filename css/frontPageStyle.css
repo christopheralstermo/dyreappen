@@ -1,3 +1,4 @@
+/* Generelle stiler */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,89 +6,117 @@ body {
     background-color: #f0f0f0;
 }
 
+#frontPage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Sentrer innholdet */
+    padding: 20px;
+}
 
+/* Filterseksjon */
 .filter {
-    background-color: #d4f0d4;
-    width: 200px;
+    background-color: #d4f0d4; /* Lys grønn bakgrunn */
+    width: 220px; /* Redusert bredde for bedre balanse */
     padding: 15px;
-    border-radius: 10px;
-    margin-right: 20px;
+    border-radius: 15px; /* Runde kanter */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
+    margin-bottom: 20px;
+    align-self: flex-start; /* Sørger for at kartet forblir venstrestilt */
 }
 
 .filter h3 {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
+    color: #388e3c; /* Mørk grønn */
 }
 
 .filter label {
     display: block;
-    margin: 5px 0;
-}
-#gpsBildet {
-    width: 150px;
-}
-
-/* card */
-
-#profilBildet {
-    padding-top: 10px;
-    height: 180px;
-    margin-left: 0px;
-}
-
-#ask:hover {
-    box-shadow: 0.2px 0.2px;
-    background-color: #83bcf6;
-}
-
-#profileBtn{
-    background-color: green;
-}
-
-.profiles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-start; 
-}
-
-.profile-card {
-    background-color: #a3cffa;
-    width: 300px;
-    padding: 25px 35px 55px 25px;
-    border-radius: 10px;
-    text-align: center;
-    height: 310px;
-}
-
-.profile-card h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #0055aa;
-}
-
-.profile-details {
+    margin: 10px 0;
     font-size: 14px;
+    color: #333;
+}
+
+#gpsBildet {
+    width: 120px; /* Redusert bredde for bedre layout */
     margin: 10px 0;
 }
 
-.profile-details p {
+/* Kortseksjon */
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Redusert mellomrom mellom kortene */
+    justify-content: flex-start; /* Juster kortene til venstre */
+    flex-grow: 1; /* Sørger for at kortene tar opp tilgjengelig plass */
+}
+
+.profile-card {
+    background-color: #ffffff; /* Hvit bakgrunn */
+    width: 220px; /* Bredde på kortene */
+    padding: 10px; /* Mindre padding for å spare plass */
+    border-radius: 15px; /* Runde kanter */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 350px; /* Redusert høyde for kortene */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Fordel innholdet jevnt */
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Liten zoom-effekt ved hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Dypere skygge ved hover */
+}
+
+.profile-image img {
+    width: 100%; /* Bildet fyller bredden av kortet */
+    height: 120px; /* Fast høyde for bildet */
+    object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
+    border-radius: 10px; /* Runde kanter for bildet */
+}
+
+.profile-details {
+    font-size: 13px; /* Mindre fontstørrelse for detaljer */
     margin: 5px 0;
+    color: #555;
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #388e3c; /* Mørk grønn */
+    text-align: center;
+    margin-bottom: 10px; /* Mellomrom mellom navnet og bildet */
 }
 
 .profile-card button {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
+    background-color: #66bb6a; /* Lys grønn */
+    border: none;
+    padding: 8px 16px; /* Mindre padding for knappen */
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px; /* Runde kanter */
+    color: white;
+    font-size: 13px; /* Mindre fontstørrelse for knappen */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+}
+
+.profile-card button:hover {
+    background-color: #81c784; /* Lysere grønn ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
 }
 
 /* Stjerner */
 .stars {
-    font-size: 20px;
+    font-size: 18px; /* Redusert fontstørrelse */
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .stars span {
@@ -98,6 +127,23 @@ body {
     color: #ffd700; /* Gul når fylt */
 }
 
-#frontPage {
-    display: flex;
+/* Responsivitet */
+@media (max-width: 800px) {
+    #frontPage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter {
+        width: 100%; /* Full bredde på små skjermer */
+        margin-bottom: 20px;
+    }
+
+    .profiles {
+        justify-content: center;
+    }
+
+    .profile-card {
+        width: 100%; /* Full bredde på små skjermer */
+    }
 }
