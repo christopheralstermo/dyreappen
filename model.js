@@ -1,6 +1,6 @@
 const model = {
     app: {
-        currentPage: 'userView',
+        currentPage: 'frontPage',
 
         loggedInId: null,
         mldFunk: false,
