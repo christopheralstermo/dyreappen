@@ -2,7 +2,7 @@ const model = {
     app: {
         currentPage: 'userView',
 
-        loggedInId: 2,
+        loggedInId: null,
         mldFunk: false,
         recieverId: null,
         senderId: null,
@@ -162,7 +162,7 @@ editUser: {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: true,
+                isLoggedIn: false,
                 message: [],
                 messageSender: [],
             },
