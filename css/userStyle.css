@@ -64,4 +64,42 @@
 
 #userProfile .actions button:active {
     transform: scale(0.95); /* Liten krymping ved klikk */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    gap: 5px; /* Add spacing between input fields */
+    width: 100%; /* Ensure consistent width */
+}
+
+.input-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make input fields stretch to the container width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 10px;
 }

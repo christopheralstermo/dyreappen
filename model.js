@@ -2,7 +2,7 @@ const model = {
     app: {
         currentPage: 'frontPage',
 
-        loggedInId: 2,
+        loggedInId: null,
         mldFunk: false,
         recieverId: null,
         senderId: null,
@@ -40,7 +40,7 @@ editUser: {
             animal: [],
             animalId: [],
             isAdmin: false,
-            picture: '',
+            picture: 'img/profile-silhouette-300x300.jpg',
             isLoggedIn: true,
         },
 
@@ -144,7 +144,7 @@ editUser: {
                 animalId: [1],
                 userId: 2,
                 isAdmin: false,
-                picture: '',
+                picture: 'img/profile-silhouette-300x300.jpg',
                 animals: [
                     {
                         name: 'Pettern',
@@ -162,7 +162,7 @@ editUser: {
                         rating: 0,
                     },
                 ],
-                isLoggedIn: true,
+                isLoggedIn: false,
                 message: [],
                 messageSender: [],
             },
