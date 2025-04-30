@@ -13,11 +13,9 @@
     return navBarHtml;
 } 
 
-function loggedInNavBarView() {
-    //gå igjennom useres og se hvem som har login = true
-   let loggedInUser = model.data.users.find((user) => user.isLoggedIn == true);
-//    let loggedInUser = getUser(); 
-
+function loggedInNavBarView() { //gå igjennom users og se hvem som har login = true
+    let loggedInUser = model.data.users.find((user) => user.isLoggedIn == true);
+    
     let navBarHtml = /*HTML*/`
         <div class="navLeft">
             <div class="logo" onclick="model.app.currentPage = 'frontPage'; updateView();">Playdate</div>
@@ -26,23 +24,12 @@ function loggedInNavBarView() {
             <div>${createNotificationWindow()}</div>
             <button class="navBtn" onclick="model.app.currentPage = 'meldingView'; updateView();">Meldinger</button>
             <button class="navBtn" onclick="model.app.currentPage = 'userView'; updateView();">Hei, ${loggedInUser.username}</button>
+            <button class="navBtn" onclick="model.app.loggedInId = null; model.app.currentPage = 'frontPage'; updateView();">Logg ut</button>
+            <img src="${loggedInUser.picture}" class="navPicture" />
         </div>
     `;
     return navBarHtml;
 }
-
-// function getUser() {
-// let user = ""   
-// for (let i=0; i < model.data.users.length; i++)
-// {
-//     if (model.data.users[i].isLoggedIn == true){
-//         user = model.data.users[i];
-//         break;
-//     }
-// } 
-// return user;
-
-// }
 
 function footerView() {
     const footerHtml = /*HTML*/`

@@ -1,6 +1,6 @@
 const model = {
     app: {
-        currentPage: 'frontPage',
+        currentPage: 'userView',
 
         loggedInId: 2,
         mldFunk: false,
@@ -40,7 +40,7 @@ editUser: {
             animal: [],
             animalId: [],
             isAdmin: false,
-            picture: '',
+            picture: 'img/profile-silhouette-300x300.jpg',
             isLoggedIn: true,
         },
 
@@ -144,7 +144,7 @@ editUser: {
                 animalId: [1],
                 userId: 2,
                 isAdmin: false,
-                picture: '',
+                picture: 'img/profile-silhouette-300x300.jpg',
                 animals: [
                     {
                         name: 'Pettern',
