@@ -64,3 +64,69 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+/* Personvernsiden spesifikke stiler */
+header {
+    background-color: var(--primary-color); /* Grønn bakgrunn */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--heading-color); /* Mørkere grønn linje */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
+}
+
+main h2 {
+    color: var(--heading-color); /* Mørk grønn */
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+main p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+main a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--secondary-color); /* Lys grønn bakgrunn */
+    border-top: 2px solid var(--primary-color); /* Grønn linje */
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
